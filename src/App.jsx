@@ -4,7 +4,7 @@ import { useState } from "react";
 import styles from "./App.module.css";
 import Chat from "./components/Chat/Chat";
 import Controls from "./components/Controls/Controls";
-import { Assistant, test } from "./assistants/googleai";
+import { Assistant } from "./assistants/googleai";
 import { Loader } from "./components/Loader/Loader";
 // import { Assistant } from "./assistants/openai";
 
@@ -17,8 +17,6 @@ function App() {
   function addMessage(message) {
     setMessages((prevMessages) => [...prevMessages, message]);
   }
-
-  console.log(test);
 
   function updateLastMessageContent(content) {
     setMessages((prevMessages) => prevMessages.map((messsage, index) => (index === prevMessages.length - 1 ? { ...messsage, content: `${messsage.content}${content}` } : messsage)));
