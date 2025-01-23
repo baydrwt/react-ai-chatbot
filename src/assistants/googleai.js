@@ -4,6 +4,7 @@ import { GoogleGenerativeAI } from "@google/generative-ai";
 
 // const googleAI = new GoogleGenerativeAI(import.meta.env.VITE_GOOGLE_AI_API_KEY);
 const googleAI = new GoogleGenerativeAI(process.env.VITE_GOOGLE_AI_API_KEY);
+console.log(process.env.VITE_GOOGLE_AI_API_KEY);
 
 export class Assistant {
   #chat;
