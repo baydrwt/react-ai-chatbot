@@ -1,8 +1,7 @@
-/* eslint-disable no-undef */
 /* eslint-disable no-useless-catch */
 import { GoogleGenerativeAI } from "@google/generative-ai";
 
-const googleAI = new GoogleGenerativeAI(process.env.VITE_GOOGLE_AI_API_KEY);
+const googleAI = new GoogleGenerativeAI(import.meta.env.VITE_GOOGLE_AI_API_KEY);
 
 export class Assistant {
   #chat;
